@@ -166,4 +166,19 @@ public class RotateGestureDetector extends TwoFingerGestureDetector {
 		double diffRadians = Math.atan2(mPrevFingerDiffY, mPrevFingerDiffX) - Math.atan2(mCurrFingerDiffY, mCurrFingerDiffX);
 		return (float) (diffRadians * 180 / Math.PI);
 	}
+
+	public float getFocusX() {
+		return mCurrEvent.getX() + mCurrFingerDiffX * 0.5f;
+	}
+
+	public float getFocusY() {
+		return mCurrEvent.getY() + mCurrFingerDiffY * 0.5f;
+	}
+	public float getFocusX() {
+		return mCurrEvent.getX() + mCurrFingerDiffX * 0.5f;
+	}
+
+	public float getFocusY() {
+		return mCurrEvent.getY() + mCurrFingerDiffY * 0.5f;
+	}
 }
